@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — Lock Harbor</title>
+  <link rel="icon" type="image/png" href="images/app-icon.png" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: #1d3553;
+      color: #e5e7eb;
+      line-height: 1.7;
+      padding: 40px 20px 80px;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 2rem; font-weight: 700; color: #4f8eff; margin-bottom: 4px; }
+    .subtitle { font-size: 0.85rem; color: #9db2d4; margin-bottom: 32px; }
+    h2 { font-size: 1.1rem; font-weight: 600; color: #f9fafb; margin-top: 34px; margin-bottom: 8px; }
+    p { margin-bottom: 14px; color: #d6e0ef; }
+    ul { margin: 10px 0 14px 20px; color: #d6e0ef; }
+    li { margin-bottom: 6px; }
+    strong { color: #f9fafb; }
+    a { color: #4f8eff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .callout { background: #374d6a; border: 1px solid #4e6889; border-radius: 10px; padding: 20px; margin: 18px 0; }
+    .callout p:last-child { margin-bottom: 0; }
+    .warn { border-left: 3px solid #f59e0b; }
+    footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid #4e6889; font-size: 0.85rem; color: #9db2d4; }
+    footer a { margin-right: 14px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Frequently Asked Questions</h1>
+    <p class="subtitle">Lock Harbor</p>
+
+    <h2>Can you see my passwords?</h2>
+    <p>No, and not as a promise &mdash; as a matter of design. There is no Lock Harbor server and no account.
+    Your vault is an encrypted file on your phone. We have no copy of it and no way to obtain one.</p>
+
+    <h2>What happens if I forget my master password?</h2>
+    <p>Your <strong>recovery key</strong> &mdash; shown once when you set up the app &mdash; lets you set a new
+    master password. If you have neither the master password nor the recovery key, and no backup file, the
+    vault cannot be opened by anyone, including us. There is no reset link, because there is nothing to send
+    one from.</p>
+
+    <h2>What if I lose or break my phone?</h2>
+    <div class="callout warn">
+      <p>If you have an encrypted backup, install Lock Harbor on the new phone and restore from it. <strong>If
+      you have no backup, your entries are gone.</strong> This is the direct cost of nothing being stored on a
+      server, and it is the single best reason to take a backup today.</p>
+    </div>
+
+    <h2>Does it sync between my devices?</h2>
+    <p>Not yet. Your vault lives on one phone. Moving to another device means taking an encrypted backup and
+    restoring it there. Sync is planned but deliberately last, because it is the feature that would introduce
+    a server.</p>
+
+    <h2>Does it work without internet?</h2>
+    <p>Completely. You can use Lock Harbor in airplane mode indefinitely. The only feature that ever makes a
+    network request is the optional breach check, which is off until you enable it.</p>
+
+    <h2>Is it available on iPhone?</h2>
+    <p>Not yet &mdash; Lock Harbor is Android for now. Filling passwords on iOS works through a different
+    mechanism that has to be built separately rather than ported.</p>
+
+    <h2>I turned on autofill but nothing appears in my browser.</h2>
+    <p>Almost always the browser's own setting. Choosing Lock Harbor in Android's settings is not enough for
+    most browsers &mdash; in Chrome you also need
+    <strong>&#8942; &rarr; Settings &rarr; Autofill services &rarr; Autofill using another service</strong>.
+    Firefox needs nothing extra.</p>
+    <p><strong>Samsung Internet will not work at all yet</strong>, whatever you configure &mdash; it asks a
+    newer part of Android that Lock Harbor does not answer yet. Use Chrome or Firefox.</p>
+    <p>A quick test: if filling works in an ordinary app but never in the browser, it is the browser.</p>
+
+    <h2>Why does a login I have saved not get offered?</h2>
+    <p>Matching runs on the website address stored against the entry. If it has none, or it does not match the
+    site asking, it is not offered &mdash; even if the name looks right. Open the entry and add the address.
+    Lock Harbor deliberately never offers a password it cannot tie to whoever is asking, and treats a
+    look-alike address as a different site.</p>
+
+    <h2>Has Lock Harbor been security audited?</h2>
+    <p><strong>No.</strong> It uses well-established, published cryptography (Argon2id and
+    XChaCha20-Poly1305) through maintained libraries rather than anything home-made, and the protocol is
+    documented. But no external party has reviewed it, and we will not describe it as audited or
+    "military grade" until that is actually true.</p>
+
+    <h2>Is the security code on my card ever scanned?</h2>
+    <p>No. Card scanning reads the number, expiry and cardholder name only. The security code is always typed
+    by you.</p>
+
+    <h2>Are photos of my documents saved when I scan them?</h2>
+    <p>No. The camera image is read for the fields and discarded immediately. Nothing is written to your photo
+    library and nothing is uploaded.</p>
+
+    <h2>Why did a scan get a field wrong?</h2>
+    <p>A driver's licence is read from a barcode and is very reliable. Cards and passports are read from
+    printed text, which is inherently less certain &mdash; a field can come back blank or slightly wrong.
+    Embossed cards with raised numbers are the hardest. Always check what was filled before saving.</p>
+
+    <h2>Why is a passport's middle name sometimes missing?</h2>
+    <p>The machine-readable lines separate given names with a single character that the camera occasionally
+    misreads or loses, which merges the names into one. It fills about two thirds of the time on a clean
+    scan. Rescanning often works; typing it takes two seconds.</p>
+
+    <h2>Can I get my data out?</h2>
+    <p>Yes, two ways: an encrypted backup, or a plain-text CSV/JSON export for moving to another manager. The
+    plain-text one is unprotected by definition, so it warns you and asks for your master password first.</p>
+
+    <h2>Does it show ads or cost anything ongoing?</h2>
+    <p>No ads, no trackers, and no subscription mechanism in the app.</p>
+
+    <h2>Why can't I take a screenshot?</h2>
+    <p>Screenshot blocking is on by default so your vault cannot be captured by other software or appear in
+    the app switcher. Turn it off in <strong>Settings &rarr; Privacy</strong> if you need a capture, and back
+    on afterwards.</p>
+
+    <footer>
+      <a href="marketing.html">Home</a>
+      <a href="index.html">Support &amp; Guide</a>
+      <a href="faq.html">FAQ</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms-of-service.html">Terms</a>
+    </footer>
+  </div>
+</body>
+</html>

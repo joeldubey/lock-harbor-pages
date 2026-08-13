@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lock Harbor — your passwords stay on your phone</title>
+  <link rel="icon" type="image/png" href="images/app-icon.png" />
+  <meta name="description" content="A password manager with no account and no server. Your vault is encrypted on your own phone, and works fully offline." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: #1d3553;
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 56px 20px 80px; }
+    .hero { text-align: center; padding-bottom: 8px; }
+    .hero h1 { font-size: 2.6rem; font-weight: 700; color: #f9fafb; letter-spacing: -0.5px; margin-bottom: 12px; }
+    .hero h1 span { color: #4f8eff; }
+    .tagline { font-size: 1.15rem; color: #d6e0ef; max-width: 620px; margin: 0 auto 10px; }
+    .sub { font-size: 0.95rem; color: #9db2d4; max-width: 600px; margin: 0 auto; }
+    h2 { font-size: 1.35rem; font-weight: 700; color: #f9fafb; margin: 48px 0 14px; }
+    h3 { font-size: 1rem; font-weight: 600; color: #f9fafb; margin-bottom: 6px; }
+    p { margin-bottom: 14px; color: #d6e0ef; }
+    strong { color: #f9fafb; }
+    a { color: #4f8eff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 18px; }
+    .card { background: #374d6a; border: 1px solid #4e6889; border-radius: 12px; padding: 20px; }
+    .card p { margin-bottom: 0; font-size: 0.92rem; color: #cbd8ea; }
+    .card .icon { font-size: 1.4rem; display: block; margin-bottom: 8px; }
+    .banner { background: #374d6a; border: 1px solid #4e6889; border-left: 3px solid #22d3ee; border-radius: 12px; padding: 24px; margin: 40px 0 8px; }
+    .banner p:last-child { margin-bottom: 0; }
+    .honest { border-left-color: #f59e0b; }
+    ul { margin: 8px 0 14px 20px; color: #d6e0ef; }
+    li { margin-bottom: 6px; }
+    .links { text-align: center; margin-top: 44px; }
+    .button { display: inline-block; background: #4f8eff; color: #0b1d33; font-weight: 600; padding: 12px 22px; border-radius: 8px; margin: 6px 4px; }
+    .button:hover { text-decoration: none; opacity: 0.9; }
+    .button.ghost { background: transparent; color: #4f8eff; border: 1px solid #4f8eff; }
+    footer { margin-top: 52px; padding-top: 18px; border-top: 1px solid #4e6889; font-size: 0.85rem; color: #9db2d4; text-align: center; }
+    footer a { margin: 0 8px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <h1>Lock<span>Harbor</span></h1>
+      <p class="tagline">A password manager with no account, no server, and nothing to sign in to.</p>
+      <p class="sub">Your vault is encrypted and stored on your own phone. It works in airplane mode,
+      indefinitely.</p>
+    </div>
+
+    <div class="banner">
+      <p><strong>Most password managers keep a copy of your vault on their servers.</strong> That is what
+      makes sync easy &mdash; and it is also what makes a company breach everybody's problem at once.</p>
+      <p>Lock Harbor makes the opposite trade. There is no database of users to leak, because there is no
+      database of users. The cost is honest and worth knowing up front: <strong>nobody can recover your vault
+      for you</strong>, so backups matter.</p>
+    </div>
+
+    <h2>What it does</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="icon">&#128274;</span>
+        <h3>Everything encrypted</h3>
+        <p>Argon2id protects your master password; XChaCha20-Poly1305 protects your entries. Titles and
+        usernames sit inside the encrypted content, not beside it &mdash; the stored file holds no readable
+        text.</p>
+      </div>
+      <div class="card">
+        <span class="icon">&#128273;</span>
+        <h3>Generate real passwords</h3>
+        <p>Random passwords and passphrases with an honest strength estimate &mdash; one that does not give
+        credit for patterns an attacker already expects.</p>
+      </div>
+      <div class="card">
+        <span class="icon">&#128193;</span>
+        <h3>Folders that fit your life</h3>
+        <p>Group entries however you like, with an entry allowed in more than one folder. Search covers
+        everything at once.</p>
+      </div>
+      <div class="card">
+        <span class="icon">&#128737;</span>
+        <h3>See what needs attention</h3>
+        <p>Reused, weak, old and insecure entries surfaced in plain lists you can act on &mdash; plus an
+        optional, opt-in check against known breaches.</p>
+      </div>
+      <div class="card">
+        <span class="icon">&#9989;</span>
+        <h3>Fill logins in other apps</h3>
+        <p>Android autofill offers only entries that match whoever is asking, always names the requester, and
+        never fills without you choosing.</p>
+      </div>
+      <div class="card">
+        <span class="icon">&#128247;</span>
+        <h3>Scan instead of typing</h3>
+        <p>A driver's licence barcode, a payment card, or a passport page. The image is read and discarded
+        &mdash; never saved, never uploaded.</p>
+      </div>
+      <div class="card">
+        <span class="icon">&#128229;</span>
+        <h3>Bring your data with you</h3>
+        <p>Import from Bitwarden, 1Password, LastPass, Dashlane, Keeper, Chrome or NordPass, with a preview
+        before anything is saved.</p>
+      </div>
+      <div class="card">
+        <span class="icon">&#128190;</span>
+        <h3>Backups you control</h3>
+        <p>One encrypted file under a passphrase you choose, restorable onto a new phone. Optional reminders
+        so you actually take one.</p>
+      </div>
+    </div>
+
+    <h2>More item types than just logins</h2>
+    <p>Payment cards, IDs and passports, bank accounts, Wi-Fi passwords and secure notes &mdash; each with the
+    fields that actually belong to it, and masked entry for card numbers and dates.</p>
+
+    <div class="banner honest">
+      <p><strong>What Lock Harbor is not, said here rather than discovered later:</strong></p>
+      <ul>
+        <li><strong>It has not had an external security audit.</strong> It uses established, published
+        cryptography through maintained libraries &mdash; that describes how it is built, not a guarantee.
+        You will not see the words "military grade" here.</li>
+        <li><strong>It does not sync between devices yet.</strong> One phone, plus backups you move
+        yourself.</li>
+        <li><strong>It is Android for now.</strong> iPhone support needs a separately built mechanism.</li>
+        <li><strong>No built-in two-factor code generator</strong>, deliberately &mdash; keeping a password
+        and its second factor in one vault collapses two independent factors into one.</li>
+        <li><strong>Samsung Internet autofill is not supported yet.</strong> Chrome and Firefox work.</li>
+      </ul>
+    </div>
+
+    <div class="links">
+      <a class="button" href="index.html">Support &amp; User's Guide</a>
+      <a class="button ghost" href="faq.html">FAQ</a>
+    </div>
+
+    <footer>
+      <a href="marketing.html">Home</a>
+      <a href="index.html">Support &amp; Guide</a>
+      <a href="faq.html">FAQ</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms-of-service.html">Terms</a>
+    </footer>
+  </div>
+</body>
+</html>

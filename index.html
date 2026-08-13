@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support &amp; User's Guide — Lock Harbor</title>
+  <link rel="icon" type="image/png" href="images/app-icon.png" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: #1d3553;
+      color: #e5e7eb;
+      line-height: 1.7;
+      padding: 40px 20px 80px;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 2rem; font-weight: 700; color: #4f8eff; margin-bottom: 4px; }
+    .subtitle { font-size: 0.85rem; color: #9db2d4; margin-bottom: 32px; }
+    h2 { font-size: 1.1rem; font-weight: 600; color: #f9fafb; margin-top: 36px; margin-bottom: 10px; border-bottom: 1px solid #4e6889; padding-bottom: 6px; }
+    h3 { font-size: 0.95rem; font-weight: 600; color: #f9fafb; margin-top: 18px; margin-bottom: 8px; }
+    p { margin-bottom: 14px; color: #d6e0ef; }
+    ul, ol { margin: 10px 0 14px 20px; color: #d6e0ef; }
+    li { margin-bottom: 6px; }
+    strong { color: #f9fafb; }
+    a { color: #4f8eff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .callout { background: #374d6a; border: 1px solid #4e6889; border-radius: 10px; padding: 20px; margin: 18px 0; }
+    .callout p:last-child { margin-bottom: 0; }
+    .warn { border-left: 3px solid #f59e0b; }
+    .accent { border-left: 3px solid #22d3ee; }
+    .button { display: inline-block; background: #4f8eff; color: #0b1d33; font-weight: 600; text-decoration: none; padding: 10px 18px; border-radius: 8px; margin-top: 6px; }
+    .button:hover { text-decoration: none; opacity: 0.9; }
+    footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid #4e6889; font-size: 0.85rem; color: #9db2d4; }
+    footer a { margin-right: 14px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Support &amp; User's Guide</h1>
+    <p class="subtitle">Lock Harbor &middot; a password manager that keeps everything on your own phone</p>
+
+    <div class="callout accent">
+      <p><strong>Two things worth knowing before anything else.</strong></p>
+      <p>1. Lock Harbor has no account and no server. Nobody &mdash; including us &mdash; can reset your
+      master password or recover your vault. <strong>Take a backup.</strong></p>
+      <p>2. Everything in this guide is also inside the app, under <strong>Settings &rarr; Help</strong>.</p>
+    </div>
+
+    <h2>Getting started</h2>
+    <ol>
+      <li><strong>Choose a master password.</strong> This one password protects everything else, and it is
+      the one you cannot look up. A passphrase of several unrelated words is stronger and easier to
+      remember than a short complicated one.</li>
+      <li><strong>Save your recovery key.</strong> Lock Harbor shows a one-time key that can get you back in
+      if you forget your master password. Write it down or store it somewhere away from the phone. You are
+      asked to confirm parts of it so it cannot be skipped by accident.</li>
+      <li><strong>Turn on quick unlock</strong> (optional) to open the vault with a fingerprint or face
+      instead of typing.</li>
+    </ol>
+
+    <h2>Your vault</h2>
+    <p>The <strong>Vault</strong> tab is your home screen. Entries live in folders you create &mdash; "boat",
+    "work", "travel" &mdash; and an entry can sit in more than one folder. Anything you have not filed shows
+    under <strong>Unfiled</strong>.</p>
+    <p>Search works across everything regardless of folder. The filter icon beside the search box narrows to
+    favourites or a single type, and can be used on its own without typing anything.</p>
+    <h3>What you can store</h3>
+    <ul>
+      <li><strong>Logins</strong> &mdash; username, password, website, notes, plus password history.</li>
+      <li><strong>Secure notes</strong> &mdash; free text, encrypted like everything else.</li>
+      <li><strong>Payment cards, IDs, bank accounts and Wi-Fi passwords</strong> &mdash; with the right
+      fields for each, including masked entry for card numbers and dates.</li>
+    </ul>
+    <p>Tap a value to reveal it; it hides itself again after 30 seconds. Copying puts it on the clipboard and
+    clears it after a delay you control in Settings.</p>
+
+    <h2>Making strong passwords</h2>
+    <p>The <strong>Generator</strong> tab makes random passwords or passphrases and shows an honest strength
+    estimate. Capitalisation and separators earn no credit, because an attacker knows those patterns &mdash;
+    only real randomness counts. You can generate straight into an entry from the password field.</p>
+
+    <h2>The Security screen</h2>
+    <p>A score plus seven categories you can drill into: reused passwords, weak passwords, insecure
+    (<code>http://</code>) addresses, old passwords, missing passwords, password age, and the optional
+    breach check.</p>
+    <p>The score is a summary, not a measurement &mdash; the lists underneath are the part you can act on. A
+    brand-new vault shows no score at all, because a vault with nothing in it is unused rather than
+    secure.</p>
+    <h3>The breach check</h3>
+    <p><strong>Off until you turn it on</strong>, because it is the only feature that uses the internet. Your
+    password is never sent &mdash; only the first five characters of a hash of it, with the comparison done
+    on your phone. See the <a href="privacy-policy.html">Privacy Policy</a> for exactly what that request
+    reveals.</p>
+
+    <h2>Filling passwords in other apps (Android)</h2>
+    <p>Lock Harbor can fill saved logins into other apps and websites.</p>
+    <ol>
+      <li>Turn on <strong>Settings &rarr; Fill passwords in other apps</strong> and accept Android's
+      confirmation.</li>
+      <li><strong>Most browsers need their own switch as well.</strong> In Chrome:
+      <strong>&#8942; &rarr; Settings &rarr; Autofill services &rarr; Autofill using another service</strong>.
+      Firefox needs nothing extra.</li>
+    </ol>
+    <div class="callout warn">
+      <p><strong>Samsung Internet is not supported yet.</strong> It asks a newer part of Android that Lock
+      Harbor does not yet answer, so Lock Harbor will not appear there however it is configured. Use Chrome
+      or Firefox for now.</p>
+      <p>A quick way to tell the difference: if filling works in a normal app but never in your browser, it
+      is the browser's own setting rather than Lock Harbor.</p>
+    </div>
+    <p>When you tap a password field, a <strong>Lock Harbor</strong> option appears above the keyboard. Tap
+    it, unlock if the vault is closed, and pick the entry. Only entries whose saved website matches whatever
+    is asking are offered, and the screen always shows you who asked &mdash; check it before you tap. A
+    look-alike address gets nothing.</p>
+    <p>If a login you expect is missing, open it in the vault and add the website address; matching runs on
+    that.</p>
+
+    <h2>Scanning a document</h2>
+    <p>Instead of typing, you can scan:</p>
+    <ul>
+      <li><strong>Driver's licence</strong> &mdash; reads the barcode on the back. Very reliable.</li>
+      <li><strong>Payment card</strong> &mdash; reads the number, expiry and cardholder name off the front,
+      usually in under a second. The security code is never read; you always type that yourself.</li>
+      <li><strong>Passport</strong> &mdash; reads the two machine-readable lines at the bottom of the photo
+      page.</li>
+    </ul>
+    <p>Nothing is photographed to storage &mdash; the camera image is read and discarded, and never leaves
+    the phone. <strong>Always check the filled fields before saving.</strong> Card and passport scanning read
+    printed text, so some fields can come back blank or wrong; embossed (raised-number) cards are the least
+    reliable. Middle names on a passport fill about two thirds of the time.</p>
+
+    <h2>Backups, restoring, and importing</h2>
+    <div class="callout warn">
+      <p><strong>This is the most important page in the guide.</strong> Your vault exists on one phone. If
+      you lose it with no backup, nobody can recover your entries.</p>
+    </div>
+    <p><strong>Settings &rarr; Backup</strong> creates one encrypted file containing everything, protected by
+    a <strong>backup passphrase you choose at the time</strong> &mdash; deliberately separate from your master
+    password, because the file has to be able to restore onto a phone that has no vault yet. Save it
+    somewhere that survives losing the phone. You can also set a reminder to back up weekly, fortnightly or
+    monthly.</p>
+    <p><strong>Restoring</strong> works either on a fresh install (from the welcome screen) or into a vault
+    you are already using. Restoring only ever adds &mdash; it never deletes or overwrites &mdash; so
+    restoring the same file twice creates duplicates.</p>
+    <p><strong>Importing</strong> from another manager is under Settings &rarr; Import: Bitwarden,
+    1Password, LastPass, Dashlane, Keeper, Chrome, NordPass, or a generic CSV. You see a preview and a
+    per-row report of anything that could not be read before anything touches your vault. Folders are matched
+    by name or created; individual entries are not matched against what you already have, so importing twice
+    creates duplicates.</p>
+    <p>There is also a <strong>plain-text export</strong>. It is not protected in any way, it asks for your
+    master password first, and it exists for moving to another manager.</p>
+
+    <h2>Settings worth knowing</h2>
+    <ul>
+      <li><strong>Lock when I leave the app</strong> &mdash; how long Lock Harbor may sit in the background
+      before locking itself.</li>
+      <li><strong>Clear copied passwords</strong> &mdash; how long a copied value stays on the clipboard.</li>
+      <li><strong>Block screenshots</strong> &mdash; on by default; also hides the app in the app switcher.
+      Turn it off temporarily if you need to capture something.</li>
+      <li><strong>Autofill profile</strong> &mdash; marks one ID entry as "this is me", so new ID, card and
+      bank entries start with your own name and address already filled in.</li>
+      <li><strong>Delete everything</strong> / <strong>erase entries only</strong> &mdash; two separate
+      actions, so you can clear your entries while keeping your master password and recovery key.</li>
+    </ul>
+
+    <h2>Still stuck?</h2>
+    <div class="callout">
+      <p>Email <a href="mailto:joeldubey@gmail.com">joeldubey@gmail.com</a> and include your phone model and
+      what you were doing. <strong>Never include a password, a recovery key or a backup file.</strong> No
+      genuine support request needs them, and we will never ask.</p>
+      <p><a class="button" href="faq.html">Read the FAQ</a></p>
+    </div>
+
+    <footer>
+      <a href="marketing.html">Home</a>
+      <a href="index.html">Support &amp; Guide</a>
+      <a href="faq.html">FAQ</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms-of-service.html">Terms</a>
+    </footer>
+  </div>
+</body>
+</html>

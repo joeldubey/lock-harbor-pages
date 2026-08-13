@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Lock Harbor</title>
+  <link rel="icon" type="image/png" href="images/app-icon.png" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: #1d3553;
+      color: #e5e7eb;
+      line-height: 1.7;
+      padding: 40px 20px 80px;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 2rem; font-weight: 700; color: #4f8eff; margin-bottom: 4px; }
+    .subtitle { font-size: 0.85rem; color: #9db2d4; margin-bottom: 32px; }
+    h2 { font-size: 1.1rem; font-weight: 600; color: #f9fafb; margin-top: 36px; margin-bottom: 10px; border-bottom: 1px solid #4e6889; padding-bottom: 6px; }
+    h3 { font-size: 0.95rem; font-weight: 600; color: #f9fafb; margin-top: 18px; margin-bottom: 8px; }
+    p { margin-bottom: 14px; color: #d6e0ef; }
+    ul { margin: 10px 0 14px 20px; color: #d6e0ef; }
+    ul li { margin-bottom: 6px; }
+    strong { color: #f9fafb; }
+    a { color: #4f8eff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .callout {
+      background: #374d6a;
+      border: 1px solid #4e6889;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 18px 0;
+    }
+    .callout p:last-child { margin-bottom: 0; }
+    .accent { border-left: 3px solid #22d3ee; }
+    footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid #4e6889; font-size: 0.85rem; color: #9db2d4; }
+    footer a { margin-right: 14px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Lock Harbor &middot; Last updated 13 August 2026</p>
+
+    <div class="callout accent">
+      <p><strong>The short version.</strong> Lock Harbor has no account, no server and no analytics. Your
+      vault is stored encrypted on your own device and is never uploaded anywhere. We do not collect,
+      receive, store or sell any personal information &mdash; not even an anonymous usage statistic.</p>
+      <p>There is exactly one feature that can make a network request, it is off until you switch it on,
+      and it is described in full below.</p>
+    </div>
+
+    <h2>1. What we collect</h2>
+    <p><strong>Nothing.</strong> Lock Harbor has no user accounts, no sign-in, no telemetry, no crash
+    reporting service, no advertising identifiers and no third-party analytics. There is no server that
+    belongs to Lock Harbor for your data to be sent to.</p>
+    <p>Everything you save &mdash; passwords, usernames, website addresses, notes, payment cards, IDs,
+    bank accounts, Wi-Fi passwords, folder names and pictures &mdash; is stored in a single encrypted
+    database file inside the app's private storage on your device. It stays there unless you explicitly
+    export it yourself.</p>
+
+    <h2>2. Your master password and encryption</h2>
+    <p>Your master password is never stored, anywhere, in any form. It is used to derive a key using
+    <strong>Argon2id</strong>, and that key protects your vault key; your entries are encrypted with
+    <strong>XChaCha20-Poly1305</strong>. Titles, usernames and web addresses are inside the encrypted
+    content rather than beside it, so the stored file contains no readable text about what you have
+    saved.</p>
+    <div class="callout">
+      <p><strong>An honest limitation, stated plainly:</strong> naming strong algorithms is not a
+      security guarantee. Lock Harbor has <strong>not</strong> had an external security audit, and this
+      policy makes no claim that it is unbreakable. If your master password is guessable, no amount of
+      encryption saves it.</p>
+    </div>
+    <p><strong>Nobody can recover your vault for you.</strong> Not us &mdash; we have no copy and no
+    ability to reset anything. If you forget your master password and lose your recovery key, and you have
+    no backup, the data is gone permanently. That is the direct cost of nothing being held on a server.</p>
+
+    <h2>3. The one optional network request</h2>
+    <p>The Security screen can check whether a password appears in publicly known data breaches, using the
+    <a href="https://haveibeenpwned.com/API/v3#PwnedPasswords" rel="noopener">Have I Been Pwned</a> Pwned
+    Passwords service. <strong>This is off by default and asks you to confirm before it is ever enabled.</strong></p>
+    <p>When you run a check, your password is <strong>never</strong> sent. Lock Harbor hashes it locally and
+    sends only the <strong>first five characters of that hash</strong>, receiving back a list of many
+    candidates and comparing them on your device. This is the standard k-anonymity method.</p>
+    <p>What that request unavoidably reveals to the service and to your network provider:</p>
+    <ul>
+      <li>Your IP address, as with any web request.</li>
+      <li>That some password manager asked &mdash; the request itself is not secret.</li>
+      <li>Roughly how many distinct passwords you checked, from the number of requests.</li>
+    </ul>
+    <p>It does not reveal which password, which account, or which website. If you never enable it, Lock
+    Harbor makes no network requests at all and works fully in airplane mode.</p>
+
+    <h2>4. Permissions, and why each exists</h2>
+    <ul>
+      <li><strong>Camera</strong> &mdash; only to read a driver's licence barcode, a payment card, or a
+      passport page when you tap a scan button. The image is processed on your device and never saved,
+      uploaded, or kept after the fields are read.</li>
+      <li><strong>Photos</strong> &mdash; only when you choose a picture for a folder or entry. Lock Harbor
+      receives just the image you pick.</li>
+      <li><strong>Biometrics (fingerprint / face)</strong> &mdash; optional, to unlock without typing your
+      master password. Your biometric data never reaches the app; the operating system holds it and simply
+      tells the app whether you passed.</li>
+      <li><strong>Notifications</strong> &mdash; optional reminders about backups and old passwords.
+      Generated on your device; no reminder names a specific entry.</li>
+    </ul>
+    <p>Lock Harbor does <strong>not</strong> request microphone access, location, contacts, or any
+    identifier.</p>
+
+    <h2>5. Files you export yourself</h2>
+    <p>You can create an encrypted backup, or an unencrypted plain-text export. Once you share such a file
+    it is outside Lock Harbor's control and this policy no longer governs it &mdash; wherever you send it,
+    that destination's rules apply. A plain-text export contains your real passwords in readable form; the
+    app warns you and asks for your master password before producing one.</p>
+
+    <h2>6. Children</h2>
+    <p>Lock Harbor is not directed at children and collects no information from anyone, including
+    children.</p>
+
+    <h2>7. Changes</h2>
+    <p>If this policy changes, the date at the top changes with it. Any change that meant Lock Harbor began
+    collecting data would be stated prominently here rather than quietly added.</p>
+
+    <h2>8. Contact</h2>
+    <p>Questions about privacy: <a href="mailto:joeldubey@gmail.com">joeldubey@gmail.com</a></p>
+
+    <footer>
+      <a href="marketing.html">Home</a>
+      <a href="index.html">Support &amp; Guide</a>
+      <a href="faq.html">FAQ</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms-of-service.html">Terms</a>
+    </footer>
+  </div>
+</body>
+</html>
