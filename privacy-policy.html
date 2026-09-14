@@ -41,20 +41,25 @@
 <body>
   <div class="container">
     <h1>Privacy Policy</h1>
-    <p class="subtitle">Lock Harbor &middot; Last updated 13 August 2026</p>
+    <p class="subtitle">Lock Harbor &middot; Last updated 14 September 2026</p>
 
     <div class="callout accent">
       <p><strong>The short version.</strong> Lock Harbor has no account, no server and no analytics. Your
-      vault is stored encrypted on your own device and is never uploaded anywhere. We do not collect,
-      receive, store or sell any personal information &mdash; not even an anonymous usage statistic.</p>
-      <p>There is exactly one feature that can make a network request, it is off until you switch it on,
-      and it is described in full below.</p>
+      vault is stored encrypted on your own device and is never uploaded anywhere. We never collect,
+      receive, store or sell the contents of your vault, and we have no analytics of any kind.</p>
+      <p>Two features can make a network request, and both are things you choose to do: the optional
+      breach check, and buying or restoring Lock Harbor Pro. Neither can see your vault. Both are
+      described in full below.</p>
     </div>
 
     <h2>1. What we collect</h2>
-    <p><strong>Nothing.</strong> Lock Harbor has no user accounts, no sign-in, no telemetry, no crash
-    reporting service, no advertising identifiers and no third-party analytics. There is no server that
-    belongs to Lock Harbor for your data to be sent to.</p>
+    <p><strong>Nothing from your vault, ever.</strong> Lock Harbor has no user accounts, no sign-in, no
+    telemetry, no crash reporting service, no advertising identifiers and no third-party analytics. There
+    is no server that belongs to Lock Harbor for your data to be sent to.</p>
+    <p><strong>If you buy Lock Harbor Pro</strong>, two things are collected by our payments provider so
+    that your purchase can be recognised on your device: your <strong>purchase history</strong> for this
+    app, and an <strong>anonymous identifier</strong> generated on your phone. That identifier is not
+    linked to your name, your email address or anything you have stored. See section 3b.</p>
     <p>Everything you save &mdash; passwords, usernames, website addresses, notes, payment cards, IDs,
     bank accounts, Wi-Fi passwords, folder names and pictures &mdash; is stored in a single encrypted
     database file inside the app's private storage on your device. It stays there unless you explicitly
@@ -76,7 +81,7 @@
     ability to reset anything. If you forget your master password and lose your recovery key, and you have
     no backup, the data is gone permanently. That is the direct cost of nothing being held on a server.</p>
 
-    <h2>3. The one optional network request</h2>
+    <h2>3. The optional breach check</h2>
     <p>The Security screen can check whether a password appears in publicly known data breaches, using the
     <a href="https://haveibeenpwned.com/API/v3#PwnedPasswords" rel="noopener">Have I Been Pwned</a> Pwned
     Passwords service. <strong>This is off by default and asks you to confirm before it is ever enabled.</strong></p>
@@ -89,8 +94,29 @@
       <li>That some password manager asked &mdash; the request itself is not secret.</li>
       <li>Roughly how many distinct passwords you checked, from the number of requests.</li>
     </ul>
-    <p>It does not reveal which password, which account, or which website. If you never enable it, Lock
-    Harbor makes no network requests at all and works fully in airplane mode.</p>
+    <p>It does not reveal which password, which account, or which website.</p>
+
+    <h2>3b. Buying Lock Harbor Pro</h2>
+    <p>Lock Harbor Pro is optional. The free app is a complete password manager and stores as much as you
+    like; Pro adds security analysis, breach details, reminders, document scanning and the picture icons.</p>
+    <p>Purchases are handled by <a href="https://www.revenuecat.com/privacy" rel="noopener">RevenueCat</a>
+    on top of the Apple App Store or Google Play. <strong>We never see your payment details</strong> &mdash;
+    those stay with Apple or Google and never reach us or RevenueCat.</p>
+    <p>What is collected, and only if you buy or restore a purchase:</p>
+    <ul>
+      <li>Your <strong>purchase history</strong> for this app &mdash; which plan, and whether it is active.</li>
+      <li>An <strong>anonymous identifier</strong> generated on your device, so the purchase can be matched
+      to this installation. It is not your name, your email address, or anything from your vault.</li>
+    </ul>
+    <p><strong>Nothing about your vault is involved.</strong> No password, note, card, document, website,
+    filename, or count of what you have stored is sent, and none of it could be derived from what is.</p>
+    <p><strong>The app is deliberately quiet about this.</strong> It does not contact the payments service
+    when it starts. It only does so when you open the Pro screen, buy something, restore a previous
+    purchase, or &mdash; if you are a subscriber &mdash; about once a day, so that a cancellation or refund
+    is noticed. <strong>If you never buy Pro, no request is ever made.</strong></p>
+    <p>If you never enable the breach check and never buy Pro, Lock Harbor makes no network requests at
+    all and works fully in airplane mode. Even as a Pro subscriber, everything except the daily check
+    works offline exactly as before.</p>
 
     <h2>4. Permissions, and why each exists</h2>
     <ul>
