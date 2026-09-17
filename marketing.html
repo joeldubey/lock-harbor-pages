@@ -35,6 +35,8 @@
     .honest { border-left-color: #f59e0b; }
     ul { margin: 8px 0 14px 20px; color: #d6e0ef; }
     li { margin-bottom: 6px; }
+    .store { text-align: center; margin: 22px 0 0; }
+    .store .note { display: block; font-size: 0.85rem; color: #9db2d4; margin-top: 10px; }
     .links { text-align: center; margin-top: 44px; }
     .button { display: inline-block; background: #4f8eff; color: #0b1d33; font-weight: 600; padding: 12px 22px; border-radius: 8px; margin: 6px 4px; }
     .button:hover { text-decoration: none; opacity: 0.9; }
@@ -50,6 +52,17 @@
       <p class="tagline">A password manager with no account, no server, and nothing to sign in to.</p>
       <p class="sub">Your vault is encrypted and stored on your own phone. It works in airplane mode,
       indefinitely.</p>
+      <!--
+        The direct link matters more than it looks. There is a DIFFERENT app called
+        LockHarbor on Google Play -- an ad-supported app locker, nothing to do with
+        this one -- and it outranks us for the bare name. Anyone told to "search for
+        LockHarbor" may well install theirs. Always hand out this link, never the name.
+      -->
+      <p class="store">
+        <a class="button" href="https://play.google.com/store/apps/details?id=com.dubayaapps.lockharbor">Get it on Google Play</a>
+        <span class="note">Search results can be misleading &mdash; this link goes to the right app.
+        Made by Dubaya Apps. The iPhone version is with Apple for review.</span>
+      </p>
     </div>
 
     <div class="banner">
@@ -133,7 +146,8 @@
     </div>
 
     <div class="links">
-      <a class="button" href="index.html">Support &amp; User's Guide</a>
+      <a class="button" href="https://play.google.com/store/apps/details?id=com.dubayaapps.lockharbor">Get it on Google Play</a>
+      <a class="button ghost" href="index.html">Support &amp; User's Guide</a>
       <a class="button ghost" href="faq.html">FAQ</a>
     </div>
 
